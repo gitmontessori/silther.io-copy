@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwysciwlmsfqa"]
+
+[ext_resource type="Script" path="res://segment_gracza.gd" id="1_rnoq0"]
+[ext_resource type="Texture2D" uid="uid://bfk6gb0k6j4dd" path="res://images/Graphics/body_horizontal.png" id="2_7wfd3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_peptx"]
+size = Vector2(40, 30)
+
+[node name="segment" type="Node2D"]
+
+[node name="BodyHorizontal" type="Sprite2D" parent="."]
+texture = ExtResource("2_7wfd3")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("1_rnoq0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_peptx")

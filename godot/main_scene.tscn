@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dswk46ty4gcxb"]
+
+[ext_resource type="PackedScene" uid="uid://bm4kaecpueypi" path="res://gracz.tscn" id="1_5qnv1"]
+[ext_resource type="PackedScene" uid="uid://o0vyh3h3o6qb" path="res://jedzenie.tscn" id="2_buapm"]
+
+[node name="root" type="Node2D"]
+
+[node name="gracz" parent="." instance=ExtResource("1_5qnv1")]
+
+[node name="jedzenie" parent="." instance=ExtResource("2_buapm")]

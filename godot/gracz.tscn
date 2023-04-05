@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bm4kaecpueypi"]
+
+[ext_resource type="Script" path="res://gracz.gd" id="1_k8kak"]
+[ext_resource type="Texture2D" uid="uid://bmba20ul70v8t" path="res://images/Graphics/tail_left.png" id="1_r60ow"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8fni2"]
+size = Vector2(40, 40)
+
+[node name="gracz" type="Node2D"]
+
+[node name="TailLeft" type="Sprite2D" parent="."]
+position = Vector2(8, 7)
+texture = ExtResource("1_r60ow")
+script = ExtResource("1_k8kak")
+
+[node name="gracz" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gracz"]
+position = Vector2(4, 3)
+shape = SubResource("RectangleShape2D_8fni2")
+
+[connection signal="area_entered" from="gracz" to="." method="_on_area_2d_area_entered"]
