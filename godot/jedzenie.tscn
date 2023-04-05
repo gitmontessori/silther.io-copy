@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://o0vyh3h3o6qb"]
 
-[ext_resource type="Script" path="res://apple.gd" id="1_whcun"]
+[ext_resource type="Script" path="res://jedzenie.gd" id="1_q6wya"]
 
-[node name="Node2D" type="Node2D"]
-script = ExtResource("1_whcun")
+[node name="apple_spawner" type="Node2D"]
+script = ExtResource("1_q6wya")

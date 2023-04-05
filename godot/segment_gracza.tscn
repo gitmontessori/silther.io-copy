@@ -15,4 +15,6 @@ texture = ExtResource("2_7wfd3")
 script = ExtResource("1_rnoq0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(-1, 1)
 shape = SubResource("RectangleShape2D_peptx")
+debug_color = Color(0, 0, 0, 0.419608)
