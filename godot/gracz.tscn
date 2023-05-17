@@ -6,16 +6,16 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8fni2"]
 size = Vector2(122, 41)
 
-[node name="gracz" type="Node2D"]
+[node name="gracz" type="Node2D" groups=["gracz"]]
 script = ExtResource("1_k8kak")
 
-[node name="gracz" type="Area2D" parent="."]
+[node name="gracz" type="Area2D" parent="." groups=["gracz"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="gracz"]
 position = Vector2(8, 6.5)
 shape = SubResource("RectangleShape2D_8fni2")
 
-[node name="gracz_rigid_body" type="RigidBody2D" parent="."]
+[node name="gracz_rigid_body" type="RigidBody2D" parent="." groups=["gracz"]]
 gravity_scale = 0.0
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="gracz_rigid_body"]
@@ -29,4 +29,8 @@ texture = ExtResource("1_r60ow")
 [node name="Camera2D" type="Camera2D" parent="gracz_rigid_body"]
 scale = Vector2(0.884228, -2.90568)
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+
 [connection signal="area_entered" from="gracz" to="." method="_on_area_2d_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

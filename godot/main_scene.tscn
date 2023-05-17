@@ -12,6 +12,7 @@ scale = Vector2(6.77477, 8.18931)
 texture = ExtResource("4_xsyp5")
 
 [node name="gracz" parent="Parallax-mountain-bg" instance=ExtResource("1_5qnv1")]
+position = Vector2(-0.44282, -0.610542)
 scale = Vector2(0.147607, 0.12211)
 
 [node name="apple2" parent="Parallax-mountain-bg" instance=ExtResource("3_sv2vy")]
